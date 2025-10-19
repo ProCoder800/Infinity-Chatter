@@ -5784,9 +5784,9 @@ function openPollVotesDrawer(m, pollData) {
     
     // Build sticker list based on ownership
     for (let i = 1; i <= 78; i++) {
-      if (i === 47) continue; // skip missing file
+      if (i === 47) continue;
       const prefix = userIsOwner ? "m" : "a";
-      avatarStickers.push(`/static/${prefix}${i}.webp`);
+      avatarStickers.push(`/static/avatars/${prefix}${i}.webp`);
   }
 
   const GIPHY_IDS = [
@@ -6953,3 +6953,4 @@ def poll_alias():
 if __name__ == "__main__":
     print("DB:", DB_PATH)
     socketio.run(app, host="0.0.0.0", port=PORT, debug=False, allow_unsafe_werkzeug=True)
+
